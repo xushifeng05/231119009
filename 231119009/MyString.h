@@ -43,7 +43,7 @@ Status StrAssign(SString &s,char cstr[]) {
 Status StrOutPut(SString s) {
 	int i;
 	cout << "´®µÄÔªËØÎª£º";
-		for ( i = 1; i < s.length; i++)
+		for ( i = 1; i <= s.length; i++)
 		{
 			cout << s.data[i] << ",";
 		}
@@ -57,7 +57,7 @@ Status Concat(SString &T , SString S1 , SString S2) {
 	bool uncut;
 	if (S1.length + S2.length <= MAXSTRLEN)
 	{
-		for ( i = 1; i < S1.length; i++)
+		for ( i = 1; i <= S1.length; i++)
 		{
 			T.data[i] = S1.data[i];
 		}
@@ -67,7 +67,7 @@ Status Concat(SString &T , SString S1 , SString S2) {
 		uncut = TRUE;
 	}else if (S1.length < MAXSTRLEN)
 	{
-		for (i = 1; i < S1.length; i++)
+		for (i = 1; i <= S1.length; i++)
 		{
 			T.data[i] = S1.data[i];
 		}
