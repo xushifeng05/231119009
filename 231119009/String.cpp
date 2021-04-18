@@ -3,8 +3,10 @@
 int main() {
 	char s[] = "abacacadf";
 	char p[] = "adfajehfaejh";
+	int next[100];
 
-	int pos = 9;
+	int pos;
+	int len;
 
 	SString Sub;
 	SString S, P;
@@ -28,9 +30,20 @@ int main() {
 	StrInsert(T , 1 , Sub);
 	StrOutPut(T);
 	cout << endl;
+
+	cout << "请输入删除的位置与长度:";
+	cin >> pos >> len;
+	StrDelete(T , pos , len);
+	cout << "删除后：" << StrOutPut(T) << endl;
+
+	
     
 	StrIndex(T,S,pos);
 	cout << "BF算法查询abacacadf字串的位置:" << pos <<endl;
+
+
+	KMP(T , S);
+	cout << "KMP算法查询abacacadf字串的位置:" << pos << endl;
 	
 
 	cout << "231119009 许世烽" << endl;

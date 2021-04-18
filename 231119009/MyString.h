@@ -175,6 +175,19 @@ Status StrInsert(SString& S, int pos, SString T) {
 	return OK;
 }
 
+//串的删除
+Status StrDelete(SString &S , int pos , int len) {
+	int i;
+	if (pos<1 || pos>S.length || len<0 || len>S.length - pos + 1)
+		return ERROR;
+	for ( i = pos; i < S.length-pos-len; i++)
+	{
+		S.data[i] = S.data[i + len];
+	}
+	S.length = S.length - len;
+	return OK;
+}
+
 //销毁串
 Status DestroyStr(SString &S) {
 	int i;
@@ -199,10 +212,11 @@ void get_next(SString S, int* next) {
 		}
 	}
 	cout << "模式串的next数组为：";
-	for ( i = 0; i < j; i++)
+	for ( j = 1; j < i; j++)
 	{
-		cout << next[i] << ",";
+		cout << next[j] << ",";
 	}
+	cout << endl;
 }
 
 //kmp算法
