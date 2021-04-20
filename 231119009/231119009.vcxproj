@@ -141,12 +141,14 @@
   <ItemGroup>
     <ClInclude Include="global.h" />
     <ClInclude Include="LinkList.h" />
+    <ClInclude Include="MyArray.h" />
     <ClInclude Include="SqQueue.h" />
     <ClInclude Include="SqStack.h" />
     <ClInclude Include="MyString.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LinkList.cpp" />
+    <ClCompile Include="MyArray.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="SqList.cpp" />
     <ClCompile Include="SqList.h" />
