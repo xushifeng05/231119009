@@ -1,5 +1,6 @@
 #include"MyString.h"
 
+/*
 int main() {
 	char s[] = "abacacadf";
 	char p[] = "adfajehfaejh";
@@ -48,4 +49,4 @@ int main() {
 
 	cout << "231119009 ÐíÊÀ·é" << endl;
 	return 0;
-}
+}*/
