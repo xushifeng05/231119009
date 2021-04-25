@@ -242,3 +242,62 @@ int KMP(SString S, SString T) {
 	else
 		return 0;
 }
+
+//稀疏矩阵的十字链表存储表示
+//元素结点结构体
+typedef struct OLNode {
+	int i, j;     //该非零元的行个列的下标
+	ELemType e;   //该非零元的值
+	struct OLNode* right, * down;
+}OLNode, *OLink;
+
+//十字链结构体
+typedef struct {
+	OLink *rhead, *chead;    //行和列链表头指针向量基址由CreateSMatrix分配
+	int mu, nu, tu;
+}CrossList;
+
+//创建稀疏矩阵M，采用十字链表存储表示
+Status CreateSMatrix_OL(CrossList &M) {
+	if (&M) free(&M);
+	int m, n, t;
+	int i, j, e;
+	OLNode* p;
+	OLink q;
+	cin >> m >> n >> t;
+	M.mu = m; M.nu = n; M.tu = t;
+	if (!(M.rhead = (OLink *)malloc((m + 1) * sizeof(OLink))))
+		exit(OVERFLOW);
+	if (!(M.chead = (OLink *)malloc((n + 1) * sizeof(OLink))))
+		exit(OVERFLOW);
+	M.rhead = M.chead = NULL;
+	for (cin >> i >> j >>e;i!=0;cin >> i >> j>>e)
+	{
+		if (!(p = (OLNode *)malloc(sizeof(OLNode)))) exit(OVERFLOW);
+		p->i = i; p->j = j; p->e = e;    //生成结点
+		if (M.rhead[i] == NULL || M.rhead[i]->j > j)
+		{
+			p->right = M.rhead[i]; M.rhead[i] = p;
+		}
+		else
+		{
+			for (q = M.rhead[i];(q->right)&&q->right->j<j;q=q->right)
+			{
+				p->right = q->right;
+				q->down = p;
+			}
+		}
+		if (M.chead[j] == NULL || M.rhead[j]->i > i)
+		{
+			p->down = M.chead[j]; M.chead[j] = p;
+		}
+		else
+		{
+			for (q = M.chead[j]; (q->down) && q->down->i < i; q = q->down)
+			{
+				p->down = q->down;
+				q->down = p;
+			}
+		}
+	}
+}
