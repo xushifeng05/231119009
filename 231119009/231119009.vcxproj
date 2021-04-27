@@ -145,6 +145,7 @@
     <ClInclude Include="SqQueue.h" />
     <ClInclude Include="SqStack.h" />
     <ClInclude Include="MyString.h" />
+    <ClInclude Include="Tree.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LinkList.cpp" />
@@ -154,6 +155,7 @@
     <ClCompile Include="SqList.h" />
     <ClCompile Include="SqStack.cpp" />
     <ClCompile Include="String.cpp" />
+    <ClCompile Include="Tree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

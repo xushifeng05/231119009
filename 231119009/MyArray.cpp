@@ -1,5 +1,5 @@
 #include"MyArray.h"
-
+/*
 int main() {
 
 	TSMatrix a, b;
@@ -15,4 +15,4 @@ int main() {
 	PrintMatrix(a);
 
 	return 0;
-}
+}*/
