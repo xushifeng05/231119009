@@ -1,8 +1,8 @@
 #include"MyArray.h"
 
-int main() {
+/*int main() {
 
-	/*
+	
 	TSMatrix a, b;
 	int i;
 	CreateSMatrix(a);
@@ -14,7 +14,7 @@ int main() {
 	FastTransposeSMatrix(b, a);
 	cout << "矩阵b经过快速转置后得到矩阵a：" << endl;
 	PrintMatrix(a);
-	*/
+	
 	
 	CrossList M ,N;
 	M.chead = (OLink*)malloc(sizeof(OLink));
@@ -33,4 +33,4 @@ int main() {
 	cout << "231119009许世烽" << endl;
     return 0;
 
-}
+}*/
