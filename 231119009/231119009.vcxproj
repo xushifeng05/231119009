@@ -149,6 +149,7 @@
     <ClInclude Include="Tree.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="HuffmanTree.cpp" />
     <ClCompile Include="LinkList.cpp" />
     <ClCompile Include="MyArray.cpp" />
     <ClCompile Include="Queue.cpp" />

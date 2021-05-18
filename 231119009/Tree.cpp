@@ -1,5 +1,5 @@
 #include "Tree.h"
-
+/*
 int main() {
 	BiTree T = NULL;
 	int deep;
@@ -24,4 +24,4 @@ int main() {
 
 	cout << "231119009ÐíÊÀ·é" << endl;
 	return 0;
-}
+}*/
