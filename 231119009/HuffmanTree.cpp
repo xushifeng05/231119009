@@ -1,6 +1,6 @@
 #pragma warning(disable:4996);
 #include "HuffmanTree.h"
-
+/*
 void main() {
 	int i, n;
 	int* w;
@@ -33,4 +33,4 @@ void main() {
 	free(HT);
 
 	cout <<endl << "231119009ÐíÊÀ·é" << endl;
-}
+}*/

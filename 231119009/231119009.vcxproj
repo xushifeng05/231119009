@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="global.h" />
+    <ClInclude Include="Graph.h" />
     <ClInclude Include="HuffmanTree.h" />
     <ClInclude Include="LinkList.h" />
     <ClInclude Include="MyArray.h" />
@@ -149,6 +150,7 @@
     <ClInclude Include="Tree.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Graph.cpp" />
     <ClCompile Include="HuffmanTree.cpp" />
     <ClCompile Include="LinkList.cpp" />
     <ClCompile Include="MyArray.cpp" />
