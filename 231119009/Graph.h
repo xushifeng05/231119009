@@ -137,7 +137,7 @@ void BFS(Graph G, int start) {
 	cout << G.Vex[start];
 	visited[start] = true;
 	Q.push(start); //入队
-	while (Q.empty())
+	while (!Q.empty())
 	{
 		int v = Q.front(); // 得到队头元素
 		Q.pop();
